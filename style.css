@@ -1,0 +1,1239 @@
+/* ==========================================================================
+   Jewel Store - Punchy Round Design Stylesheet
+   Introduction to ICT Lab Project
+   - Round Design: Pill buttons, rounded cards (24px), rounded inputs (50px)
+   - Punchy Solid Colors: High-contrast Gold, Royal Blue, Midnight Navy, Crimson
+   - Deep Layered Box Shadows: Elevated cards, glowing button shadows
+   - Zero Emojis & Pure Solid Colors (Flat Punchy Styling)
+   ========================================================================== */
+
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Punchy Solid Color Palette */
+  --primary-navy: #0f172a;
+  /* Deep Midnight Navy */
+  --secondary-navy: #1e293b;
+  /* Slate Blue Navy */
+  --navy-light: #334155;
+  /* Elevated Navy Border */
+  --gold-primary: #f59e0b;
+  /* Punchy Amber Gold */
+  --gold-hover: #d97706;
+  /* Deep Punchy Gold */
+  --gold-light: #fef3c7;
+  /* Soft Gold Tint */
+  --gold-subtle: #fffbeb;
+  /* Punchy Gold Wash */
+  --punchy-blue: #2563eb;
+  /* Vibrant Royal Blue */
+  --punchy-blue-hover: #1d4ed8;
+  /* Deep Royal Blue */
+  --punchy-red: #e11d48;
+  /* Punchy Crimson */
+  --punchy-emerald: #10b981;
+  /* Punchy Emerald Green */
+  --punchy-purple: #8b5cf6;
+  /* Punchy Royal Purple */
+  --dark-accent: #020617;
+  /* Solid Dark Accent */
+  --bg-light: #f1f5f9;
+  /* Punchy Clean Light Slate Canvas */
+  --card-bg: #ffffff;
+  /* Pure Crisp White Card */
+  --text-dark: #0f172a;
+  /* Punchy High-Contrast Text */
+  --text-muted: #64748b;
+  /* Crisp Slate Muted Text */
+  --border-light: #e2e8f0;
+  /* Crisp Border */
+  --border-gold: #f59e0b;
+  /* Solid Gold Accent Border */
+
+  /* Round Design Variables */
+  --radius-pill: 50px;
+  --radius-card: 24px;
+  --radius-img: 18px;
+  --radius-sm: 12px;
+
+  /* Deep Layered Box Shadows */
+  --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 10px 25px -4px rgba(15, 23, 42, 0.12), 0 6px 12px -3px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 20px 35px -5px rgba(15, 23, 42, 0.16), 0 10px 15px -5px rgba(15, 23, 42, 0.1);
+  --shadow-hover: 0 24px 45px -6px rgba(15, 23, 42, 0.22), 0 12px 18px -4px rgba(15, 23, 42, 0.12);
+  --shadow-gold: 0 10px 25px rgba(245, 158, 11, 0.45);
+  --shadow-blue: 0 10px 25px rgba(37, 99, 235, 0.4);
+  --shadow-red: 0 8px 20px rgba(225, 29, 72, 0.4);
+  --shadow-emerald: 0 8px 20px rgba(16, 185, 129, 0.4);
+
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* --- Base & Reset --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand-font {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+  color: var(--primary-navy);
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Global rounded overrides for Bootstrap helper classes */
+.rounded-3 {
+  border-radius: var(--radius-card) !important;
+}
+
+.card {
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid var(--border-light) !important;
+}
+
+/* --- Punchy Solid Utility Classes --- */
+.text-gold {
+  color: var(--gold-primary) !important;
+}
+
+.text-navy-dark {
+  color: var(--primary-navy) !important;
+}
+
+.bg-gold {
+  background-color: var(--gold-primary) !important;
+  color: #000 !important;
+}
+
+.bg-navy-dark {
+  background-color: var(--primary-navy) !important;
+  color: #fff !important;
+}
+
+.bg-navy-secondary {
+  background-color: var(--secondary-navy) !important;
+  color: #fff !important;
+}
+
+.bg-cream {
+  background-color: var(--bg-light) !important;
+}
+
+.border-gold {
+  border-color: var(--gold-primary) !important;
+}
+
+/* --- Round Pill Buttons with Punchy Colors & Shadows --- */
+.btn {
+  border-radius: var(--radius-pill) !important;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 0.6px;
+  padding: 10px 24px;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-lg {
+  padding: 14px 34px !important;
+  font-size: 1rem !important;
+  border-radius: var(--radius-pill) !important;
+}
+
+.btn-sm {
+  padding: 7px 18px !important;
+  font-size: 0.82rem !important;
+  border-radius: var(--radius-pill) !important;
+}
+
+/* Punchy Gold Button */
+.btn-gold {
+  background-color: var(--gold-primary) !important;
+  color: #0f172a !important;
+  border: 2px solid var(--gold-primary) !important;
+  box-shadow: var(--shadow-gold) !important;
+  text-transform: uppercase;
+}
+
+.btn-gold:hover {
+  background-color: var(--gold-hover) !important;
+  border-color: var(--gold-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 30px rgba(245, 158, 11, 0.6) !important;
+  transform: translateY(-3px);
+}
+
+/* Punchy Outline Gold Button */
+.btn-outline-gold {
+  background-color: transparent !important;
+  color: var(--gold-primary) !important;
+  border: 2px solid var(--gold-primary) !important;
+  box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2) !important;
+  text-transform: uppercase;
+}
+
+.btn-outline-gold:hover {
+  background-color: var(--gold-primary) !important;
+  color: #0f172a !important;
+  box-shadow: var(--shadow-gold) !important;
+  transform: translateY(-3px);
+}
+
+/* Punchy Royal Blue Button */
+.btn-navy {
+  background-color: var(--punchy-blue) !important;
+  color: #ffffff !important;
+  border: 2px solid var(--punchy-blue) !important;
+  box-shadow: var(--shadow-blue) !important;
+}
+
+.btn-navy:hover {
+  background-color: var(--punchy-blue-hover) !important;
+  border-color: var(--punchy-blue-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 14px 28px rgba(37, 99, 235, 0.55) !important;
+  transform: translateY(-3px);
+}
+
+.btn-outline-navy {
+  background-color: transparent !important;
+  color: var(--punchy-blue) !important;
+  border: 2px solid var(--punchy-blue) !important;
+}
+
+.btn-outline-navy:hover {
+  background-color: var(--punchy-blue) !important;
+  color: #fff !important;
+  box-shadow: var(--shadow-blue) !important;
+  transform: translateY(-2px);
+}
+
+/* --- Round Form Controls with Shadows --- */
+.form-control,
+.form-select {
+  border-radius: var(--radius-pill) !important;
+  border: 2px solid var(--border-light);
+  padding: 10px 20px;
+  font-size: 0.92rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+textarea.form-control {
+  border-radius: 18px !important;
+  padding: 14px 18px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2) !important;
+  outline: none;
+}
+
+.input-group .input-group-text:first-child {
+  border-top-left-radius: var(--radius-pill) !important;
+  border-bottom-left-radius: var(--radius-pill) !important;
+}
+
+.input-group .form-control:last-child {
+  border-top-right-radius: var(--radius-pill) !important;
+  border-bottom-right-radius: var(--radius-pill) !important;
+}
+
+/* --- Top Header Notice Bar (Solid) --- */
+.top-notice-bar {
+  background-color: var(--dark-accent);
+  color: #e2e8f0;
+  font-size: 0.82rem;
+  padding: 8px 0;
+  border-bottom: 2px solid var(--gold-primary);
+}
+
+.top-notice-bar a {
+  color: #e2e8f0;
+}
+
+.top-notice-bar a:hover {
+  color: var(--gold-primary);
+}
+
+/* --- Main Navigation Bar (Round & Elevated) --- */
+.navbar-jewel {
+  background-color: var(--primary-navy);
+  padding: 14px 0;
+  border-bottom: 3px solid var(--gold-primary);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff !important;
+  letter-spacing: 1.5px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .gem-icon {
+  color: var(--gold-primary);
+  font-size: 1.8rem;
+  margin-right: 10px;
+  filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.5));
+}
+
+.navbar-jewel .nav-link {
+  color: #f1f5f9 !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 8px 16px !important;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.navbar-jewel .nav-link:hover,
+.navbar-jewel .nav-link.active {
+  background-color: var(--secondary-navy) !important;
+  color: var(--gold-primary) !important;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Nav Dropdown Menu (Rounded Pill Corners) */
+.navbar-jewel .dropdown-menu {
+  background-color: var(--secondary-navy);
+  border: 2px solid var(--gold-primary);
+  border-radius: 18px !important;
+  box-shadow: var(--shadow-lg);
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.navbar-jewel .dropdown-item {
+  color: #f1f5f9;
+  font-size: 0.86rem;
+  padding: 10px 18px;
+  font-weight: 600;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+}
+
+.navbar-jewel .dropdown-item:hover,
+.navbar-jewel .dropdown-item.active {
+  background-color: var(--gold-primary);
+  color: #0f172a;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-jewel .dropdown-divider {
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+/* Nav Action Badges & Icons */
+.badge.bg-danger {
+  background-color: var(--punchy-red) !important;
+  box-shadow: var(--shadow-red);
+}
+
+.badge.bg-success {
+  background-color: var(--punchy-emerald) !important;
+  box-shadow: var(--shadow-emerald);
+}
+
+.nav-actions-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- Hero Banner Section (Solid Punchy Overlay) --- */
+.hero-banner-section {
+  position: relative;
+  min-height: 560px;
+  background: url('bg img.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 85px 0;
+}
+
+/* Solid Punchy Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 23, 42, 0.86);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-subtitle {
+  font-family: var(--font-heading);
+  color: #0f172a;
+  background-color: var(--gold-primary);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 18px;
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-gold);
+}
+
+.hero-title {
+  color: #ffffff;
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.hero-desc {
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  max-width: 640px;
+  margin-bottom: 32px;
+}
+
+/* Round Pill Search Bar with Deep Shadow */
+.jewelry-search-box {
+  background-color: #ffffff;
+  padding: 8px 12px;
+  border-radius: var(--radius-pill) !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.25) !important;
+  border: 3px solid var(--gold-primary);
+}
+
+.jewelry-search-box .form-control {
+  border: none !important;
+  box-shadow: none !important;
+  font-size: 0.95rem;
+  padding: 10px 18px;
+}
+
+.jewelry-search-box .form-select {
+  border: none !important;
+  border-left: 2px solid #e2e8f0 !important;
+  box-shadow: none !important;
+  font-size: 0.9rem;
+  color: var(--primary-navy);
+  font-weight: 600;
+  border-radius: 0 !important;
+}
+
+/* --- Features / Value Badges Bar (Round Cards with Shadows) --- */
+.features-bar {
+  background-color: #ffffff;
+  color: var(--text-dark);
+  padding: 35px 0;
+  border-bottom: 2px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--bg-light);
+  padding: 16px 20px;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+  transition: var(--transition);
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-primary);
+}
+
+.feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50% !important;
+  background-color: var(--gold-primary);
+  color: #0f172a;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-gold);
+}
+
+.feature-text h6 {
+  color: var(--primary-navy);
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.feature-text p {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-bottom: 0;
+}
+
+/* --- Section Headers --- */
+.section-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-header .sub-title {
+  font-family: var(--font-heading);
+  color: #0f172a;
+  background-color: var(--gold-light);
+  border: 1.5px solid var(--gold-primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.section-header .main-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.section-header .divider-gem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 220px;
+}
+
+.section-header .divider-gem::before,
+.section-header .divider-gem::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background-color: var(--gold-primary);
+}
+
+.section-header .divider-gem i {
+  color: var(--gold-primary);
+  font-size: 1rem;
+}
+
+/* --- Round Category Cards with Shadows --- */
+.category-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-card) !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-md) !important;
+  transition: var(--transition);
+  position: relative;
+  height: 100%;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover) !important;
+  border-color: var(--gold-primary);
+}
+
+.category-card .card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  background-color: var(--primary-navy);
+  border-top-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
+}
+
+.category-card .card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover .card-img-wrap img {
+  transform: scale(1.08);
+}
+
+.category-card .card-body {
+  padding: 26px;
+  text-align: center;
+}
+
+.category-card .cat-title {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.category-card .cat-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+}
+
+/* --- Round Product Cards with Deep Box Shadows --- */
+.product-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-card) !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-md) !important;
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover) !important;
+  border-color: var(--gold-primary);
+}
+
+.product-card .product-img-wrapper {
+  position: relative;
+  background-color: #0f172a;
+  overflow: hidden;
+  height: 270px;
+  border-top-left-radius: var(--radius-card);
+  border-top-right-radius: var(--radius-card);
+}
+
+.product-card .product-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Punchy Solid Badges (Round Pill) */
+.product-badge-code {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: var(--primary-navy);
+  color: var(--gold-primary);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--gold-primary);
+  box-shadow: var(--shadow-sm);
+  z-index: 2;
+}
+
+.product-badge-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background-color: var(--gold-primary);
+  color: #0f172a;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-gold);
+  z-index: 2;
+}
+
+.product-card .card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.product-card .product-category {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--punchy-blue);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.product-card .product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--primary-navy);
+}
+
+.product-card .product-desc {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+
+.product-card .rating-stars {
+  color: #f59e0b;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.product-card .product-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+.product-card .product-price .currency {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--punchy-blue);
+  margin-right: 3px;
+}
+
+.product-card .card-footer {
+  background: transparent;
+  border-top: 2px solid var(--border-light);
+  padding: 16px 22px 22px;
+}
+
+/* --- Page Breadcrumb Banner (Solid Color) --- */
+.page-title-banner {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  padding: 55px 0 50px;
+  border-bottom: 4px solid var(--gold-primary);
+  margin-bottom: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.page-title-banner h1 {
+  color: #ffffff;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.page-title-banner .breadcrumb {
+  margin-bottom: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.page-title-banner .breadcrumb-item,
+.page-title-banner .breadcrumb-item a {
+  color: #cbd5e1;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.page-title-banner .breadcrumb-item a:hover {
+  color: var(--gold-primary);
+}
+
+.page-title-banner .breadcrumb-item.active {
+  color: var(--gold-primary);
+}
+
+.page-title-banner .breadcrumb-item+.breadcrumb-item::before {
+  color: var(--gold-primary);
+}
+
+/* --- Cart Page Styles (Round Design & Shadows) --- */
+.cart-table th {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 16px 18px;
+  border: none;
+}
+
+.cart-table td {
+  padding: 20px 18px;
+  vertical-align: middle;
+  border-color: var(--border-light);
+}
+
+.cart-product-thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--gold-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.cart-qty-input {
+  max-width: 85px;
+  text-align: center;
+  font-weight: 700;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-pill) !important;
+  padding: 6px 10px;
+}
+
+.order-summary-card {
+  background-color: #ffffff;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-card) !important;
+  padding: 28px;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.order-summary-card h4 {
+  border-bottom: 3px solid var(--gold-primary);
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+  font-size: 1.35rem;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.summary-row.total-row {
+  border-top: 2px solid var(--border-light);
+  padding-top: 16px;
+  margin-top: 16px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+/* --- Checkout Page Styles --- */
+.checkout-card {
+  background: #ffffff;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-card) !important;
+  padding: 30px;
+  box-shadow: var(--shadow-md) !important;
+  margin-bottom: 25px;
+}
+
+.checkout-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-light);
+}
+
+.payment-method-box {
+  border: 2px solid var(--border-light);
+  border-radius: 18px !important;
+  padding: 18px;
+  margin-bottom: 14px;
+  transition: var(--transition);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.payment-method-box:hover,
+.payment-method-box.selected {
+  border-color: var(--gold-primary);
+  background-color: var(--gold-subtle);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- Auth (Login & Register) Styles --- */
+.auth-wrapper {
+  min-height: calc(100vh - 380px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 15px;
+}
+
+.auth-card {
+  background: #ece7e7;
+  border: 2px solid var(--border-light);
+  border-top: 6px solid var(--gold-primary) !important;
+  border-radius: var(--radius-card) !important;
+  padding: 40px 36px;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.22) !important;
+  max-width: 520px;
+  width: 100%;
+}
+
+.auth-card .brand-emblem {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.auth-card .brand-emblem i {
+  font-size: 2.6rem;
+  color: var(--gold-primary);
+  filter: drop-shadow(0 4px 10px rgba(230, 183, 103, 0.4));
+}
+
+.auth-card h3 {
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+}
+
+.auth-card p.auth-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+
+/* --- Order Confirmation & History (Round & Elevated) --- */
+.confirmation-card {
+  background: #ffffff;
+  border: 2px solid var(--border-light);
+  border-top: 6px solid var(--punchy-emerald) !important;
+  border-radius: var(--radius-card) !important;
+  padding: 40px;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.confirmation-header {
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 2px solid var(--border-light);
+  margin-bottom: 25px;
+}
+
+.confirmation-icon {
+  width: 76px;
+  height: 76px;
+  background-color: #ecfdf5;
+  border: 3px solid var(--punchy-emerald);
+  color: var(--punchy-emerald);
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin: 0 auto 18px;
+  box-shadow: var(--shadow-emerald);
+}
+
+.order-metadata-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  background-color: var(--bg-light);
+  padding: 22px;
+  border-radius: 18px !important;
+  border: 2px solid var(--border-light);
+  margin-bottom: 25px;
+  box-shadow: var(--shadow-sm);
+}
+
+.order-meta-item .meta-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.order-meta-item .meta-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.user-summary-card {
+  background-color: var(--primary-navy) !important;
+  color: #ffffff !important;
+  border-radius: var(--radius-card) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.history-table th {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 14px 18px;
+  border: none;
+}
+
+.history-table td {
+  padding: 18px;
+  vertical-align: middle;
+  border-color: var(--border-light);
+  font-size: 0.92rem;
+}
+
+/* --- About Us Page --- */
+.about-hero-img-box {
+  position: relative;
+  border-radius: var(--radius-card) !important;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg) !important;
+  border: 3px solid var(--gold-primary);
+}
+
+.about-feature-card {
+  background: #ffffff;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-card) !important;
+  padding: 30px 24px;
+  box-shadow: var(--shadow-md) !important;
+  transition: var(--transition);
+  height: 100%;
+}
+
+.about-feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold-primary);
+  box-shadow: var(--shadow-hover) !important;
+}
+
+.about-feature-icon {
+  width: 58px;
+  height: 58px;
+  background-color: var(--gold-primary);
+  color: #0f172a;
+  border-radius: 50% !important;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-gold);
+}
+
+/* --- Contact Us Page --- */
+.contact-info-card {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  border-radius: var(--radius-card) !important;
+  padding: 36px;
+  height: 100%;
+  border: 3px solid var(--gold-primary);
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.contact-info-card h4 {
+  color: #ffffff;
+  font-size: 1.45rem;
+  margin-bottom: 20px;
+}
+
+.contact-detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.contact-detail-row .icon-circle {
+  width: 48px;
+  height: 48px;
+  background-color: var(--gold-primary);
+  color: #0f172a;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-gold);
+}
+
+.contact-detail-row h6 {
+  color: var(--gold-primary);
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.contact-detail-row p {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* --- Footer (Solid Midnight Dark) --- */
+.footer-jewel {
+  background-color: var(--dark-accent);
+  color: #cbd5e1;
+  padding: 65px 0 30px;
+  border-top: 4px solid var(--gold-primary);
+  font-size: 0.9rem;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.footer-brand h4 {
+  color: #ffffff;
+  font-size: 1.45rem;
+  margin-bottom: 14px;
+}
+
+.footer-brand p {
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.footer-widget h5 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-widget h5::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 45px;
+  height: 3px;
+  background-color: var(--gold-primary);
+  border-radius: var(--radius-pill);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a:hover {
+  color: var(--gold-primary);
+  padding-left: 6px;
+}
+
+.social-links-list {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50% !important;
+  background-color: var(--secondary-navy);
+  border: 1.5px solid var(--gold-primary);
+  color: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.social-icon-btn:hover {
+  background-color: var(--gold-primary);
+  color: #0f172a;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+  padding-top: 25px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991.98px) {
+  .hero-title {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-banner-section {
+    min-height: 480px;
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .features-bar .feature-item {
+    margin-bottom: 15px;
+  }
+}

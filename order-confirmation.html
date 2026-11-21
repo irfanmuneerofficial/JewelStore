@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation — Jewel Store</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notification Bar -->
+  <div class="top-notice-bar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div>
+        <i class="fas fa-sparkles text-gold me-2"></i>
+        <span>Free Insured Express Delivery on All Luxury Orders | 100% Certified Diamonds</span>
+      </div>
+      <div class="d-flex gap-4">
+        <span><i class="fas fa-phone-alt text-gold me-1"></i> +92 (51) 123-4567</span>
+        <span><i class="fas fa-envelope text-gold me-1"></i> concierge@jewelstore.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-jewel">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-gem gem-icon"></i>
+        <span>JEWEL STORE</span>
+      </a>
+
+      <button class="navbar-toggler border-gold" type="button" data-bs-toggle="collapse" data-bs-target="#jewelNavbar" aria-controls="jewelNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="jewelNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html"><i class="fas fa-store me-1"></i> Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"><i class="fas fa-gem me-1"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact</a>
+          </li>
+          <!-- Orders Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="ordersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-box-open me-1"></i> Orders
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="ordersDropdown">
+              <li><a class="dropdown-item" href="order-history.html"><i class="fas fa-history text-gold me-2"></i> Order History</a></li>
+              <li><a class="dropdown-item active" href="order-confirmation.html"><i class="fas fa-file-invoice text-gold me-2"></i> Order Confirmation</a></li>
+            </ul>
+          </li>
+          <!-- Account Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user-circle me-1"></i> Account
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="accountDropdown">
+              <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-in-alt text-gold me-2"></i> Login</a></li>
+              <li><a class="dropdown-item" href="register.html"><i class="fas fa-user-plus text-gold me-2"></i> Register</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="login.html"><i class="fas fa-sign-out-alt me-2"></i> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <!-- Right Quick Actions -->
+        <div class="nav-actions-wrapper">
+          <a href="cart.html" class="btn btn-outline-gold position-relative btn-sm" title="Shopping Cart">
+            <i class="fas fa-shopping-bag me-1"></i> Cart
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+          </a>
+          <a href="checkout.html" class="btn btn-gold btn-sm d-none d-sm-inline-flex">
+            <i class="fas fa-credit-card me-1"></i> Checkout
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Title Banner -->
+  <div class="page-title-banner">
+    <div class="container text-center">
+      <h1>Order Confirmation</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="shop.html">Shop</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Order Confirmation</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Content -->
+  <main class="container mb-5 pb-4">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <div class="confirmation-card">
+          
+          <div class="confirmation-header">
+            <div class="confirmation-icon">
+              <i class="fas fa-check"></i>
+            </div>
+            <h2 class="h3 fw-bold text-navy-dark mb-2">Thank You for Your Order!</h2>
+            <p class="text-muted mb-0">Your order has been placed successfully and is being prepared with utmost artisanal care.</p>
+          </div>
+
+          <!-- Order Metadata Grid -->
+          <div class="order-metadata-grid">
+            <div class="order-meta-item">
+              <div class="meta-label">Order ID</div>
+              <div class="meta-value text-gold">#ORD-2026-0001</div>
+            </div>
+            <div class="order-meta-item">
+              <div class="meta-label">Customer Name</div>
+              <div class="meta-value">Muhammad Irfan</div>
+            </div>
+            <div class="order-meta-item">
+              <div class="meta-label">Order Date</div>
+              <div class="meta-value">November 20, 2026</div>
+            </div>
+            <div class="order-meta-item">
+              <div class="meta-label">Order Status</div>
+              <div class="meta-value">
+                <span class="badge bg-success px-2 py-1">Confirmed / Processing</span>
+              </div>
+            </div>
+            <div class="order-meta-item">
+              <div class="meta-label">Payment Method</div>
+              <div class="meta-value">Cash on Delivery (COD)</div>
+            </div>
+            <div class="order-meta-item">
+              <div class="meta-label">Total Quantity</div>
+              <div class="meta-value">2 Items</div>
+            </div>
+          </div>
+
+          <!-- Customer & Shipping Summary -->
+          <div class="row g-3 mb-4">
+            <div class="col-md-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <h6 class="fw-bold mb-2 text-navy-dark"><i class="fas fa-user text-gold me-2"></i> Customer Details</h6>
+                <p class="mb-1 small"><strong>Name:</strong> Muhammad Irfan (ID: C001)</p>
+                <p class="mb-1 small"><strong>Email:</strong> irfan@example.com</p>
+                <p class="mb-0 small"><strong>Phone:</strong> +92 300 1234567</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="p-3 bg-light rounded-3 border">
+                <h6 class="fw-bold mb-2 text-navy-dark"><i class="fas fa-map-marker-alt text-gold me-2"></i> Delivery Destination</h6>
+                <p class="mb-1 small"><strong>Address:</strong> House #14, Street 8, Sector F-7/2</p>
+                <p class="mb-1 small"><strong>City:</strong> Islamabad, 44000</p>
+                <p class="mb-0 small"><strong>Country:</strong> Pakistan (Insured Express Delivery)</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Purchased Products List -->
+          <h5 class="fw-bold text-navy-dark mb-3 border-bottom pb-2">
+            <i class="fas fa-gem text-gold me-2"></i> Purchased Jewelry Items
+          </h5>
+
+          <div class="table-responsive mb-4">
+            <table class="table align-middle">
+              <thead class="table-light">
+                <tr>
+                  <th scope="col">Product Item</th>
+                  <th scope="col" class="text-center">Product Code</th>
+                  <th scope="col" class="text-center">Quantity</th>
+                  <th scope="col" class="text-end">Unit Price</th>
+                  <th scope="col" class="text-end">Total Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Item 1: Grace Pendant -->
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="pendant 1.jpg" alt="Grace Pendant" class="cart-product-thumb" style="width: 50px; height: 50px;">
+                      <div>
+                        <h6 class="mb-0 fw-bold">Grace Pendant</h6>
+                        <small class="text-muted">Handcrafted Gold &amp; Emerald Drop</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <span class="badge bg-navy-dark text-gold">P001</span>
+                  </td>
+                  <td class="text-center fw-semibold">1</td>
+                  <td class="text-end text-muted">Rs. 4,500</td>
+                  <td class="text-end fw-bold text-navy-dark">Rs. 4,500</td>
+                </tr>
+
+                <!-- Item 2: Lavish Ring -->
+                <tr>
+                  <td>
+                    <div class="d-flex align-items-center gap-3">
+                      <img src="ring 2.jpg" alt="Lavish Ring" class="cart-product-thumb" style="width: 50px; height: 50px;">
+                      <div>
+                        <h6 class="mb-0 fw-bold">Lavish Ring</h6>
+                        <small class="text-muted">Crown Royale Pavé Band</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-center">
+                    <span class="badge bg-navy-dark text-gold">P005</span>
+                  </td>
+                  <td class="text-center fw-semibold">1</td>
+                  <td class="text-end text-muted">Rs. 5,000</td>
+                  <td class="text-end fw-bold text-navy-dark">Rs. 5,000</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="4" class="text-end fw-semibold">Subtotal:</td>
+                  <td class="text-end fw-bold">Rs. 9,500</td>
+                </tr>
+                <tr>
+                  <td colspan="4" class="text-end fw-semibold">Insured Express Shipping:</td>
+                  <td class="text-end text-success fw-bold">FREE</td>
+                </tr>
+                <tr class="table-active">
+                  <td colspan="4" class="text-end fs-6 fw-bold text-navy-dark">Grand Total:</td>
+                  <td class="text-end fs-5 fw-bold text-gold">Rs. 9,500</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+
+          <!-- Order Lifecycle Timeline -->
+          <div class="p-3 bg-light rounded-3 border mb-4">
+            <h6 class="fw-bold mb-3 text-navy-dark"><i class="fas fa-route text-gold me-2"></i> Order Status Tracker</h6>
+            <div class="row text-center g-2">
+              <div class="col-3">
+                <i class="fas fa-check-circle text-success fs-5"></i>
+                <div class="small fw-bold mt-1">Order Placed</div>
+                <small class="text-muted">Nov 20, 2026</small>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-spinner fa-spin text-primary fs-5"></i>
+                <div class="small fw-bold mt-1">Quality Audit</div>
+                <small class="text-muted">In Progress</small>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-truck text-muted fs-5"></i>
+                <div class="small text-muted mt-1">Dispatch</div>
+                <small class="text-muted">Pending</small>
+              </div>
+              <div class="col-3">
+                <i class="fas fa-gift text-muted fs-5"></i>
+                <div class="small text-muted mt-1">Delivery</div>
+                <small class="text-muted">Estimated 2-3 Days</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Actions -->
+          <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center">
+            <a href="order-history.html" class="btn btn-navy">
+              <i class="fas fa-history me-1"></i> View in Order History
+            </a>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-secondary" type="button" onclick="window.print()">
+                <i class="fas fa-print me-1"></i> Print Receipt
+              </button>
+              <a href="shop.html" class="btn btn-gold">
+                <i class="fas fa-shopping-bag me-1"></i> Continue Shopping
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Main Footer -->
+  <footer class="footer-jewel">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Brand Info -->
+        <div class="col-lg-4 col-md-6 footer-brand">
+          <h4 class="d-flex align-items-center text-white">
+            <i class="fas fa-gem text-gold me-2"></i> JEWEL STORE
+          </h4>
+          <p>
+            Purveyors of timeless elegance, handcrafted pendants, royal rings, and certified conflict-free diamonds. Built for the Introduction to ICT Lab project.
+          </p>
+          <div class="social-links-list">
+            <a href="#" class="social-icon-btn" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon-btn" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-icon-btn" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social-icon-btn" title="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-widget">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+            <li><a href="shop.html"><i class="fas fa-angle-right"></i> Shop Catalog</a></li>
+            <li><a href="cart.html"><i class="fas fa-angle-right"></i> Shopping Cart</a></li>
+            <li><a href="checkout.html"><i class="fas fa-angle-right"></i> Checkout</a></li>
+            <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Orders & Account -->
+        <div class="col-lg-3 col-md-6 footer-widget">
+          <h5>Orders &amp; Account</h5>
+          <ul class="footer-links">
+            <li><a href="order-history.html"><i class="fas fa-angle-right"></i> Order History</a></li>
+            <li><a href="order-confirmation.html"><i class="fas fa-angle-right"></i> Order Confirmation</a></li>
+            <li><a href="login.html"><i class="fas fa-angle-right"></i> Customer Login</a></li>
+            <li><a href="register.html"><i class="fas fa-angle-right"></i> Create Account</a></li>
+            <li><a href="login.html"><i class="fas fa-angle-right"></i> Sign Out (Logout)</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Hours -->
+        <div class="col-lg-3 col-md-6 footer-widget">
+          <h5>Boutique Contact</h5>
+          <p class="mb-2 text-secondary"><i class="fas fa-map-marker-alt text-gold me-2"></i> Blue Area, Islamabad, Pakistan</p>
+          <p class="mb-2 text-secondary"><i class="fas fa-phone-alt text-gold me-2"></i> +92 (51) 123-4567</p>
+          <p class="mb-2 text-secondary"><i class="fas fa-envelope text-gold me-2"></i> support@jewelstore.com</p>
+          <p class="text-secondary"><i class="fas fa-clock text-gold me-2"></i> Mon - Sat: 10:00 AM - 9:00 PM</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="mb-0">
+          &copy; 2026 Jewel Store. Introduction to ICT Lab Project. Designed with HTML5, CSS3, &amp; Bootstrap 5.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
